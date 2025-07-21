@@ -16,11 +16,7 @@ class AppHome extends StatefulWidget {
 
 class _AppHomeState extends State<AppHome> {
   int currentIndex = 0;
-  final List<Widget> _screens = [
-    NewsApp(),
-    LikesApp(),
-    ProfileApp(),
-  ];
+  final List<Widget> _screens = [NewsApp(), LikesApp(), ProfileApp()];
 
   void onDestinationSelected(int index) {
     setState(() {
@@ -32,11 +28,19 @@ class _AppHomeState extends State<AppHome> {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-          appBar: AppBar(
-          title: Text('MyApp'),backgroundColor: Color.fromRGBO(208, 220, 89, 1.0),
+        body: _screens[currentIndex],
+        bottomNavigationBar: NavigationBar(
+          onDestinationSelected: onDestinationSelected,
+          selectedIndex: currentIndex,
+          destinations: [
+            NavigationDestination(icon: Icon(Icons.newspaper), label: 'News'),
+            NavigationDestination(icon: Icon(Icons.favorite), label: 'Likes'),
+            NavigationDestination(icon: Icon(Icons.person), label: 'Profile'),
+          ],
         ),
-        body: Center(
-          child: Text('Hello World!'),
+        appBar: AppBar(
+          title: Text('MyApp'),
+          backgroundColor: Color.fromRGBO(208, 220, 89, 1.0),
         ),
       ),
     );

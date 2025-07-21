@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(const LikesApp());
-}
 
 class LikesApp extends StatelessWidget {
   const LikesApp({super.key});
@@ -12,9 +9,6 @@ class LikesApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        appBar: AppBar(
-          title: Text('MyApp'),backgroundColor: Color.fromRGBO(208, 220, 89, 1.0),
-        ),
         body: Center(
           child: Column(
             // mainAxisAlignment: MainAxisAlignment.center,

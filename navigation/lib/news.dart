@@ -1,9 +1,5 @@
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(const NewsApp());
-}
-
 class NewsApp extends StatelessWidget {
   const NewsApp({super.key});
 
@@ -12,9 +8,6 @@ class NewsApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        appBar: AppBar(
-          title: Text('MyApp'),backgroundColor: Color.fromRGBO(208, 220, 89, 1.0),
-        ),
         body: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
