@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MainApp());
+  runApp(const NewsApp());
 }
 
-class MainApp extends StatelessWidget {
-  const MainApp({super.key});
+class NewsApp extends StatelessWidget {
+  const NewsApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
           title: Text('MyApp'),backgroundColor: Color.fromRGBO(208, 220, 89, 1.0),
@@ -23,7 +24,7 @@ class MainApp extends StatelessWidget {
                 'News',
                 style: TextStyle(fontSize: 30, color: Colors.black),
               ),
-              Icon(Icons.newspaper, color: Colors.black, size: 50.0)
+              Icon(Icons.newspaper, color: Colors.black, size: 72.0)
             ],
           ),
         ),

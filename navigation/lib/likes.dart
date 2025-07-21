@@ -1,18 +1,40 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MainApp());
+  runApp(const LikesApp());
 }
 
-class MainApp extends StatelessWidget {
-  const MainApp({super.key});
+class LikesApp extends StatelessWidget {
+  const LikesApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
+        appBar: AppBar(
+          title: Text('MyApp'),backgroundColor: Color.fromRGBO(208, 220, 89, 1.0),
+        ),
         body: Center(
-          child: Text('Hello World!'),
+          child: Column(
+            // mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Text(
+                  'Likes',
+                  style: TextStyle(fontSize: 30, color: Colors.black),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Text("Hier findest du deine gelikten Nachrichten.",
+                  style: TextStyle(fontSize: 24, color: Colors.black),
+                  textAlign: TextAlign.center,
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );
